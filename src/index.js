@@ -10,6 +10,11 @@ const PORT = process.env.PORT;
 
 app.use(express.json());
 
+//homepage
+app.get("/", (req, res) => {
+    res.status(200).send("Welome to Budimansol");
+})
+
 //Mendapatkan semua data notes
 app.get("/notes", async (req, res) => {
     const notes = await prisma.note.findMany();
