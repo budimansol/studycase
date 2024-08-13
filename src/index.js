@@ -8,7 +8,7 @@ const app = express();
 
 const corsOption = {
     Credential: true,
-    origin: [process.env.DOMAIN, 'http://localhost:80', 'http://localhost:3000']
+    origin: [process.env.DOMAIN, 'http://localhost:80', 'http://localhost:3000', process.env.DOMAIN1]
 };
 
 app.use(cors(corsOption));
