@@ -8,7 +8,7 @@ const app = express();
 
 const corsOption = {
     Credential: true,
-    origin: ['https://studycase-production.up.railway.app', 'http://localhost:80', 'http://localhost:3000', 'https://notes-msib.vercel.app']
+    origin: ['https://studycase-production.up.railway.app', 'http://localhost:80', 'http://localhost:3000', 'https://notes-msib.vercel.app', 'https://fe-studycase.vercel.app']
 };
 
 app.use(cors(corsOption));
