@@ -15,9 +15,9 @@ const findNotebyId = async (id) => {
 }
 
 const findNotebyName = async (name) => {
-    const note = await prisma.note.findUnique({
+    const note = await prisma.note.findFirst({
         where:{
-            name
+            title: name,
         },
     });
     return note;
