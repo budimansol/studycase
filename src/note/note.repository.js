@@ -48,7 +48,6 @@ const editNotebyId = async (id, noteData) => {
 module.exports = {
     findNotes,
     findNotebyId,
-    findNotebyTitle,
     createNote,
     deleteNotebyId,
     editNotebyId
