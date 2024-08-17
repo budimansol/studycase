@@ -1,5 +1,5 @@
 const prisma = require('../db');
-const { findNotes, findNotebyId, findNotebyName } = require('./note.repository');
+const { findNotes, findNotebyId, findNotebyTitle } = require('./note.repository');
 
 const getAllNotes = async () => {
     const notes = await findNotes();
@@ -20,7 +20,7 @@ const getNotebyId = async (id) => {
 }
 
 const createNote = async (newNoteData) => {
-    const findName = await findNotebyName(newNoteData.name);
+    const findTitle = await findNotebyTitle(newNoteData.title);
     if (findName === newNoteData){
         throw new Error ("Nama Note sudah ada");
     }

@@ -14,10 +14,10 @@ const findNotebyId = async (id) => {
     return note;
 }
 
-const findNotebyName = async (name) => {
+const findNotebyTitle = async (title) => {
     const note = await prisma.note.findFirst({
         where:{
-            title: name,
+            title,
         },
     });
     return note;
@@ -57,7 +57,7 @@ const editNotebyId = async (id, noteData) => {
 module.exports = {
     findNotes,
     findNotebyId,
-    findNotebyName,
+    findNotebyTitle,
     createNote,
     deleteNotebyId,
     editNotebyId
