@@ -14,15 +14,6 @@ const findNotebyId = async (id) => {
     return note;
 }
 
-const findNotebyTitle = async (title) => {
-    const note = await prisma.note.findFirst({
-        where:{
-            title,
-        },
-    });
-    return note;
-}
-
 const createNote = async (newNoteData) => {
     const note = await prisma.note.create({
         data:{

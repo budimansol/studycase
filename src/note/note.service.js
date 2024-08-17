@@ -20,11 +20,6 @@ const getNotebyId = async (id) => {
 }
 
 const createNote = async (newNoteData) => {
-    const findTitle = await findNotebyTitle(newNoteData.title);
-    if (findTitle === newNoteData.title){
-        throw new Error ("Nama Note sudah ada");
-    }
-
     const note = await createNote(newNoteData);
 
     return note;
